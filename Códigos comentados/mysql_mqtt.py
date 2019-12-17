@@ -76,7 +76,7 @@ def on_message(client,userdata,msg):
 client = mqtt.Client()
 client.on_connect=on_connect
 client.on_message = on_message
-client.connect("weatherlab.ddns.net") #Conexión a la IP del broker/host
+client.connect("clima.sustainablelab.com.mx") #Conexión a la IP del broker/host
 try:
     client.loop_forever()
 except KeyboardInterrupt:
