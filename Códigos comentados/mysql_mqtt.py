@@ -77,8 +77,5 @@ client = mqtt.Client()
 client.on_connect=on_connect
 client.on_message = on_message
 client.connect("clima.sustainablelab.com.mx") #Conexión a la IP del broker/host
-try:
-    client.loop_forever()
-except KeyboardInterrupt:
-    print("Cerrando...")
-    db.close()
+client.loop_start()
+
